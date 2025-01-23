@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Jamiedfs
+
+dfs:
+  uploadPath: ${user.home}/dfs
+  syncBackup: false
+  autoMd5: true
+  group: dfsGroup
+  backupUrl: http://localhost:8091/upload
+  downloadUrl: http://localhost:8090/download
+
+rocketmq:
+  name-server: 192.168.0.100:9876
+  producer:
+    group: dfs-producer
+    send-message-timeout: 30000
+
+server:
+  port: 8090
